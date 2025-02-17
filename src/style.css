@@ -1,0 +1,51 @@
+html,
+body,
+#root {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: ivory;
+}
+
+.r3f {
+    touch-action: none;
+}
+
+.htmlScreen iframe {
+    width: 1024px;
+    height: 670px;
+    border: none;
+    border-radius: 20px;
+    background: #000;
+}
+
+.loaderWrapper {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ff0000;
+    width: 100%;
+    text-align: center;
+    font-family: monospace;
+}
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid rgb(255, 0, 0);
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 10px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
