@@ -37,7 +37,7 @@ export default function Experience() {
 	const onPointerLeave = () => setIsHovered(false);
 	useFrame(() => {
 		if (laptopRef.current) {
-			const targetScale = isHovered ? 1.3 : 1; 
+			const targetScale = isHovered && size.width > 500 ? 1.3 : 0.7; 
 			laptopRef.current.scale.lerp(
 				{ x: targetScale, y: targetScale, z: targetScale },
 				0.1 
@@ -92,10 +92,11 @@ export default function Experience() {
 				</Float>
 				<Text
 					font="./bangers-v20-latin-regular.woff"
-					position={[2.4, 0.75, 0.45]}
+					position={size.width > 500 ? [2.4, 0.75, 0.45] : [0.4, 1.1, 0.35]}
 					fontSize={1.2}
 					rotation-y={-1.25}
 					textAlign="center"
+					scale={size.width > 500 ? 1 : 0.5}
 				>
 					KODIX
 					{"\n"}
